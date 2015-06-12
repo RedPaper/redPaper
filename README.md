@@ -1,2 +1,0 @@
-# redPaper
-just hao kan
