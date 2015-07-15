@@ -1,0 +1,27 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>CelestialBeing</groupId>
+    <artifactId>EquipmentCheckOut</artifactId>
+    <packaging>war</packaging>
+    <version>0.1-SNAPSHOT</version>
+    <name>EquipmentCheckOut Maven Webapp</name>
+
+    <build>
+        <finalName>EquipmentCheckOut</finalName>
+    </build>
+
+    <dependencies>
+
+        <!--添加运行时和测试-->
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
