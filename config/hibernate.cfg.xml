@@ -1,0 +1,20 @@
+添加具体的持久化配置文件和log4j配置
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL 方言 -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <!-- 启用hibernate session管理方式 -->
+        <property name="current_session_context_class">org.springframework.orm.hibernate4.SpringSessionContext
+        </property>
+        <!-- 打印sql -->
+        <property name="show_sql">false</property>
+        <!-- 格式化sql -->
+        <property name="format_sql">true</property>
+        <!-- 更新表不存在时新建 -->
+        <property name="hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
