@@ -1,0 +1,31 @@
+Enable static resource.
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        ">
+    <!-- 配置自动装填 -->
+    <context:component-scan base-package="ecs.controller"/>
+
+    <!-- 配置ConversionService -->
+    <mvc:annotation-driven/>
+
+    <!-- 配置视图模型，添加前后追 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+        <!-- 配置JSTL视图 -->
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    </bean>
+
+    <!-- 允许访问静态资源 -->
+    <mvc:resources location="/script/" mapping="/script/**"/>
+</beans>
