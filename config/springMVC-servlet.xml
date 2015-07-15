@@ -1,5 +1,4 @@
-Enable static resource.
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -12,20 +11,20 @@ Enable static resource.
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         ">
-    <!-- ÅäÖÃ×Ô¶¯×°Ìî -->
+    <!-- é…ç½®è‡ªåŠ¨è£…å¡« -->
     <context:component-scan base-package="ecs.controller"/>
 
-    <!-- ÅäÖÃConversionService -->
+    <!-- é…ç½®ConversionService -->
     <mvc:annotation-driven/>
 
-    <!-- ÅäÖÃÊÓÍ¼Ä£ÐÍ£¬Ìí¼ÓÇ°ºó×· -->
+    <!-- é…ç½®è§†å›¾æ¨¡åž‹ï¼Œæ·»åŠ å‰åŽè¿½ -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
-        <!-- ÅäÖÃJSTLÊÓÍ¼ -->
+        <!-- é…ç½®JSTLè§†å›¾ -->
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
 
-    <!-- ÔÊÐí·ÃÎÊ¾²Ì¬×ÊÔ´ -->
+    <!-- å…è®¸è®¿é—®é™æ€èµ„æº -->
     <mvc:resources location="/script/" mapping="/script/**"/>
 </beans>
